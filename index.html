@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="#F6836B ">
+    <h1 align ="Center">List of articles</h1>
+    
+{% if title_list %}
+<ul>
+{% for title in title_list %}
+    <li> {{ title.title }}</li>
+{% endfor %}
+</ul>
+{% else %}
+<h2> Nothing is available </h2>
+{% endif %}
+<form method="post">
+{% csrf_token %}
+Enter here to display
+{{ form }}
+<button type="submit">Submit</button>
+</form>
+</body>
+</html>
