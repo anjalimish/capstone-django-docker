@@ -1,4 +1,4 @@
-# capstone-django-docker
+# capstone
 
 
 A simple Django Application build over Docker to test how exactly docker swarm deals with database transactions.
