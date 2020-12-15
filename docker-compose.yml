@@ -31,4 +31,8 @@ services:
       - "8887:8887"
     depends_on:
       - db
+   
+  volumes:
+     pgadmin:
+     pgvol:
 
