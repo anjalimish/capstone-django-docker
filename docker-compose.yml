@@ -1,6 +1,7 @@
 version: "3.8"
    
 services:
+
   pgAdmin:
     restart: always
     image: dpage/pgadmin4
