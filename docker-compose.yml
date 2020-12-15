@@ -2,7 +2,7 @@ version: "3.8"
    
 services:
 
-  pgAdmin:
+ pgAdmin:
     restart: always
     image: dpage/pgadmin4
     ports:
@@ -13,7 +13,7 @@ services:
     volumes:
       - pgadmin:/var/lib/pgadmin
 
-  db:
+ db:
     image: postgres
     environment:
       - POSTGRES_DB=postgres
@@ -24,7 +24,7 @@ services:
     volumes:
       - pgvol:/var/lib/postgresql/data
       
-  web:
+ web:
     build: .
     command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8887"
     volumes:
@@ -34,6 +34,6 @@ services:
     depends_on:
       - db
    
-  volumes:
+ volumes:
     pgadmin:
     pgvol:
